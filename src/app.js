@@ -3,7 +3,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import AssignLeadrouter from "./router/AssignLead.routes.js";
-
+import clientRoutes from "./router/clientRoutes.routes.js";
 const app = express();
 app.use(
   cors({
@@ -19,4 +19,5 @@ app.use(cookieParser());
 
 // Routes Declarations
 app.use("/api/v1/AssignLead", AssignLeadrouter);
+app.use("/api/v1/clients", clientRoutes);
 export { app };
