@@ -21,6 +21,6 @@ app.use(cookieParser());
 // Routes Declarations
 app.use("/api/v1/AssignLead", AssignLeadrouter);
 app.use("/api/v1/clients", clientRoutes);
-app.use("/api/v1/clients", clientRoutes);
+app.use("/api/v1/clientsinfo", clientinfoRoutes);
 
 export { app };
