@@ -1,5 +1,11 @@
 import { Router } from "express";
-import { DeleteData, FetchAllData, FetchData, SaveData, UpdateData } from "../controllers/ABC.controllers.js";
+import {
+  DeleteData,
+  FetchAllData,
+  FetchData,
+  SaveData,
+  UpdateData,
+} from "../controllers/AssignLead.controllers.js";
 
 const router = Router();
 
@@ -12,8 +18,5 @@ router.route("/save").post(SaveData);
 router.route("/fetch-all").get(FetchAllData);
 
 router.route("/fetch/:id").get(FetchData);
-
-
-
 
 export default router;
