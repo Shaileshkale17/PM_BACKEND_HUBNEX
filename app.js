@@ -20,9 +20,7 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // Routes Declarations
-app.get("/", (req, res) => {
-  res.write("Welcome server!");
-});
+
 app.use("/api/v1/AssignLead", AssignLeadrouter);
 app.use("/api/v1/clients", clientRoutes);
 app.use("/api/v1/clientsinfo", clientinfoRoutes);
