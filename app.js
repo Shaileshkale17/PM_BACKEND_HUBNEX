@@ -5,6 +5,10 @@ import AssignLeadrouter from "./router/AssignLead.routes.js";
 import clientRoutes from "./router/clientRoutes.routes.js";
 import clientinfoRoutes from "./router/clients.js";
 import FromDataRoutes from "./router/FromData.routes.js";
+import {
+  FetchAllData,
+  UpdateData,
+} from "./controllers/AssignLead.controllers.js";
 const app = express();
 app.use(
   cors({
@@ -19,10 +23,14 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // Routes Declarations
-
+//! AssignLead
 app.get("/", (req, res) => {
   res.status(200).json("success");
 });
+
+app.put("AssignLead/update/:id", UpdateData);
+app.get("AssignLead/fetch-all", FetchAllData);
+
 app.use("/api/v1/AssignLead", AssignLeadrouter);
 app.use("/api/v1/clients", clientRoutes);
 app.use("/api/v1/clientsinfo", clientinfoRoutes);
