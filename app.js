@@ -5,8 +5,6 @@ import AssignLeadrouter from "./router/AssignLead.routes.js";
 import clientRoutes from "./router/clientRoutes.routes.js";
 import clientinfoRoutes from "./router/clients.js";
 import FromDataRoutes from "./router/FromData.routes.js";
-import { asyncHandler } from "./utils/asycHandler.js";
-import { AssignLead } from "./Models/AssignModel.js";
 const app = express();
 app.use(
   cors({
@@ -22,15 +20,10 @@ app.use(cookieParser());
 
 // Routes Declarations
 //! AssignLead
-app.get("/", async (req, res) => {
-  const leads = await AssignLead.find();
-
-  if (!leads.length) {
-    throw new APIError(404, "No leads found");
-  }
-
-  return res.status(200).json(leads, "success");
+app.get("/", (req, res) => {
+  res.status(200).json("success");
 });
+
 app.use("/api/v1/AssignLead", AssignLeadrouter);
 app.use("/api/v1/clients", clientRoutes);
 app.use("/api/v1/clientsinfo", clientinfoRoutes);
