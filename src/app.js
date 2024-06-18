@@ -25,7 +25,7 @@ app.use("/api/v1/clients", clientRoutes);
 app.use("/api/v1/clientsinfo", clientinfoRoutes);
 app.use("/api/v1/FromData", FromDataRoutes);
 // this is testing only
-app.get("/", (req, res) => {
+app.get("/api/", (req, res) => {
   res.write("Welcome server!");
 });
 export { app };
