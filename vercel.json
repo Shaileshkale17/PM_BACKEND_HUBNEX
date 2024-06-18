@@ -13,7 +13,7 @@
       },
       {
         "src": "/api/v1/AssignLead(.*)",
-        "dest": "/controllers/AssignLead.controllers.js"
+        "dest": "/router/AssignLead.routes.js"
       }
     ]
   }
