@@ -20,9 +20,9 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // Routes Declarations
-app.use("/api/v1/AssignLead", AssignLeadrouter);
-app.use("/api/v1/clients", clientRoutes);
-app.use("/api/v1/clientsinfo", clientinfoRoutes);
-app.use("/api/v1/FromData", FromDataRoutes);
+app.use("/api/v1/", AssignLeadrouter);
+app.use("/api/v1/", clientRoutes);
+app.use("/api/v1/", clientinfoRoutes);
+app.use("/api/v1/", FromDataRoutes);
 
 export { app };
