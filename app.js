@@ -22,18 +22,15 @@ app.use(cookieParser());
 
 // Routes Declarations
 //! AssignLead
-app.get(
-  "/",
-  asyncHandler(async (req, res) => {
-    const leads = await AssignLead.find();
+app.get("/", async (req, res) => {
+  const leads = await AssignLead.find();
 
-    if (!leads.length) {
-      throw new APIError(404, "No leads found");
-    }
+  if (!leads.length) {
+    throw new APIError(404, "No leads found");
+  }
 
-    return res.status(200).json(leads, "success");
-  })
-);
+  return res.status(200).json(leads, "success");
+});
 app.use("/api/v1/AssignLead", AssignLeadrouter);
 app.use("/api/v1/clients", clientRoutes);
 app.use("/api/v1/clientsinfo", clientinfoRoutes);
