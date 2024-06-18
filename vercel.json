@@ -12,7 +12,12 @@
         "dest": "/app.js"
       },
       {
-        "src": "/api/v1/AssignLead(.*)",
+        "src": "/api/v1/AssignLead/(.*)",
+        "dest": "/router/AssignLead.routes.js"
+      }
+      ,
+      {
+        "src": "/api/v1/clients/(.*)",
         "dest": "/router/AssignLead.routes.js"
       }
     ]
