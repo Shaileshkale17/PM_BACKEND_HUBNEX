@@ -8,8 +8,12 @@
     ],
     "routes": [
       {
-        "src": "/api/v1/.*(.*)",
+        "src": "/api/v1/(.*)",
         "dest": "/app.js"
+      },
+      {
+        "src": "/api/v1/AssignLead(.*)",
+        "dest": "/controllers/AssignLead.controllers.js"
       }
     ]
   }
