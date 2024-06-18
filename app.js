@@ -6,6 +6,7 @@ import clientRoutes from "./router/clientRoutes.routes.js";
 import clientinfoRoutes from "./router/clients.js";
 import FromDataRoutes from "./router/FromData.routes.js";
 import { asyncHandler } from "./utils/asycHandler.js";
+import { AssignLead } from "./Models/AssignModel.js";
 const app = express();
 app.use(
   cors({
