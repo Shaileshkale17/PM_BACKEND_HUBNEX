@@ -20,6 +20,9 @@ app.use(cookieParser());
 
 // Routes Declarations
 
+app.get("/", (req, res) => {
+  res.status(200).json("success");
+});
 app.use("/api/v1/AssignLead", AssignLeadrouter);
 app.use("/api/v1/clients", clientRoutes);
 app.use("/api/v1/clientsinfo", clientinfoRoutes);
