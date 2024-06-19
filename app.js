@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -20,6 +19,11 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // Routes Declarations
+//! AssignLead
+app.get("/", (req, res) => {
+  res.status(200).json("success");
+});
+
 app.use("/api/v1/AssignLead", AssignLeadrouter);
 app.use("/api/v1/clients", clientRoutes);
 app.use("/api/v1/clientsinfo", clientinfoRoutes);
