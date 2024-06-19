@@ -5,6 +5,7 @@ import AssignLeadrouter from "./router/AssignLead.routes.js";
 import clientRoutes from "./router/clientRoutes.routes.js";
 import clientinfoRoutes from "./router/clients.js";
 import FromDataRoutes from "./router/FromData.routes.js";
+import ProjectInterestRoutes from "./router/ProjectInterest.js";
 const app = express();
 app.use(
   cors({
@@ -28,5 +29,6 @@ app.use("/api/v1/AssignLead", AssignLeadrouter);
 app.use("/api/v1/clients", clientRoutes);
 app.use("/api/v1/clientsinfo", clientinfoRoutes);
 app.use("/api/v1/FromData", FromDataRoutes);
+app.use("/api/v1/ProjectInterest", ProjectInterestRoutes);
 
 export { app };
