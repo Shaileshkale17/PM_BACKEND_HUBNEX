@@ -26,15 +26,4 @@ ConnectDB()
 
   
 
-// app.post("/save", async (req, res) => {
-//   try {
-//     const reqData = req.body;
-//     const assignData = new AssignLead(reqData);
-//     await assignData.save();
-//     res.status(StatusCodes.CREATED).send({ message: "Data Inserted" });
-//   } catch (error) {
-//     res
-//       .status(StatusCodes.INTERNAL_SERVER_ERROR)
-//       .send({ message: "Something went wrong" });
-//   }
-// });
+
